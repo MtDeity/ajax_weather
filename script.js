@@ -11,7 +11,7 @@ fetch(`${url}?${qs}`, {
   .then(response => response.json())
   .then(json => {
     const weather = json.weather[0].description;
-    console.log(json.weather[0].description);
+    console.log(weather);
 
     const root = document.getElementById("root");
     root.innerHTML = `<h1>${weather}</h1>`;
