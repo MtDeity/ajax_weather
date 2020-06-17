@@ -1,0 +1,79 @@
+# HTTP課題
+
+## HTTPとは
+
+Hypertext Transfer Protocolの略。通信プロトコルの一種。WebブラウザとWebサーバの通信に使用される。
+
+## HTTPメッセージとは
+
+リクエストとレスポンスでやり取りされるデータ。
+
+## HTTPメッセージには2種類ありますがなんでしょう
+
+リクエストメッセージとレスポンスメッセージ。
+
+## HTTPメッセージの構成を教えてください(ヒント: メッセージヘッダーなど)
+
+リクエストメッセージはリクエスト行・ヘッダーフィールド・ボディで構成され、レスポンスメッセージはステータス行・ヘッダーフィールド・ボディで構成される。
+
+## HTTPリクエストは以下の4つに分けることができます。あと1つはなんでしょう
+
+### 「」「メッセージヘッダー(HTTPヘッダー)」「空白行」「メッセージボディ」
+
+リクエストライン（リクエスト行）
+
+## HTTPレスポンスは以下の4つに分けることができます。あと1つはなんでしょう
+
+### 「」「メッセージヘッダー(HTTPヘッダー)」「空白行」「メッセージボディ」
+
+ステータスライン（ステータス行）
+
+## メッセージボディは空になる可能性があるか?
+
+ヘッダーフィールドとボディは空となる場合もある。
+
+## HTTPメソッドを全て教えてください。各々の説明を教えてください
+
+- GET
+
+  指定されたURI(Uniform Resource Identifier：統一資源識別子)のリソースを取り出す。
+
+- POST
+
+  クライアントがサーバにデータを送信する。
+
+- PUT
+
+  指定したURIにリソースを保存する。
+
+- HEAD
+
+  指定したURIのHTTPヘッダのみを取り出す。
+
+- DELETE
+
+  指定したURIのリソースを削除する。
+
+- OPTIONS
+
+  サーバを調査する。
+
+- TRACE
+
+  サーバまでのネットワーク経路をチェックする。
+
+- CONNECT
+
+  TCP(Transmission Control Protocol：伝送制御プロトコル)トンネルを接続する。
+
+## GETとPOSTの違いを教えてください
+
+GETはクライアントがサーバから指定されたURIのリソースを取り出すのに対し、POSTはクライアントがサーバにデータを送信する。
+
+## ステータスコードとはなんですか？よくあるステータスコードを教えてください
+
+HTTPリクエストが正常に完了したかどうかを示す。100番台が案内、200番台が正常処理、300番台が移転通知、400番台が処理失敗、500番台がサーバエラーを表す。403 Forbiddenはアクセス権がない時に、404 Not Foundは該当アドレスのページがない、あるいはサーバが落ちている時に表示される。
+
+## メッセージヘッダー(HTTPヘッダー)にはどんなものが入るか教えてください
+
+リクエストヘッダにはAuthorization・From・If-Modified-Since・Referer・User-Agent・Accept・Accept-Charset・Accept-Encoding・Accept-Language・Host・If-Match・If-None-Match・If-Range・If-Unmodified-Since・Max-Forwards・Proxy-Authorization・Rangeが、レスポンスヘッダにはServer・Date・Last-Modified・Content-Length・Content-Type・Expires・Location・Pragma・Status・WWW-Authenticate・Refresh・Set-Cookie・Etagが入る。
